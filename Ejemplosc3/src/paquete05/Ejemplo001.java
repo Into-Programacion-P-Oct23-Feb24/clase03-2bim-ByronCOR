@@ -8,7 +8,7 @@ package paquete05;
  *
  * @author LAB.ELECT
  */
-public class Paquete05 {
+public class Ejemplo001 {
 
     /**
      * @param args the command line arguments
