@@ -5,6 +5,8 @@
  */
 package paquete01;
 
+import java.util.Scanner;
+
 /**
  *
  * @author reroes
@@ -16,26 +18,36 @@ public class Ejemplo021 {
      */
     public static void main(String[] args) {
         // Creación de arreglo bidimensionales
+        Scanner entrada = new Scanner(System.in);
+
         String cadenaFinal = "";
         // forma 1
+        int valor;
         int[][] arreglo1 = new int[3][4]; //
         // System.out.printf("Uso de la opción length: %d\n", arreglo1.length);
-        
+
         // System.out.printf("Valor en la posición [0][2]\n", arreglo1[0][2]);
-       
-        arreglo1[0][2] = 1000;
-          
+
+        for (int f = 0; f < arreglo1.length; f++) {
+            
+            for (int c = 0; c < arreglo1[f].length; c++) {
+                System.out.printf("ingrese el dato %d %d\n",f,c);
+                valor = entrada.nextInt();
+                arreglo1[f][c] = valor;
+            }
+        }
+
         for (int fila = 0; fila < arreglo1.length; fila++) {
             for (int col = 0; col < arreglo1[fila].length; col++) {
-                // System.out.printf("fila[%d] columna[%d] = %d\n", 
-                //        fila, col, arreglo1[fila][col]);
-                cadenaFinal = String.format("%sfila[%d] columna[%d] = %d\n", 
+                System.out.printf("fila[%d] columna[%d] = %d\n",
+                        fila, col, arreglo1[fila][col]);
+                cadenaFinal = String.format("%sfila[%d] columna[%d] = %d\n",
                         cadenaFinal, fila, col, arreglo1[fila][col]);
             }
         }
-        
+
         System.out.printf("%s\n", cadenaFinal);
-        
+
     }
-    
+
 }
