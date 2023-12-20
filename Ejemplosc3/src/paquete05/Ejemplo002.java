@@ -22,12 +22,19 @@ public class Ejemplo002 {
               
         10      41      40
         1       2       3
+        1       12      4
         */
         int suma = 0;
         int valor;
         for (int fila = 0; fila < arreglo1.length; fila++) {
             for (int col = 0; col < arreglo1[fila].length; col++) {
-                valor = arreglo1[fila][col]; 
+                valor = arreglo1[fila][col];
+                /* se colocò como condicional que el valor que tiene fila debe
+                ser igual al valor que tiene col debido a que los valores que se 
+                deben sumar sus posisciones de filas y columnas son iguales 
+                (00)  01   02
+                 10  (11)  12
+                 20   21  (22)*/
                 if (fila==col){
                     suma = suma + valor;
                 }

@@ -22,6 +22,7 @@ public class Ejemplo002 {
               
         10      41      40
         1       2       3
+        1       12      4
         */
         int suma = 0;
         int valor;
